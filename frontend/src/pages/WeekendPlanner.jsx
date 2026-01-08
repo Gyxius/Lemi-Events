@@ -35,7 +35,7 @@ export default function WeekendPlanner() {
           </h2>
           
           <div className="flex flex-wrap gap-3 mb-8">
-            {['Art & Museums', 'Music', 'Food & Dining', 'Sports', 'Nature', 'Nightlife', 'Theater', 'Shopping'].map((interest) => (
+            {['Art & Museums', 'Games', 'Music', 'Food & Dining', 'Sports', 'Nature', 'Nightlife', 'Theater', 'Shopping'].map((interest) => (
               <button
                 key={interest}
                 onClick={() => setInterests(prev => 
@@ -72,37 +72,6 @@ export default function WeekendPlanner() {
             <button className="px-8 py-3 bg-black text-white font-bold rounded-lg hover:bg-gray-800 transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105 active:scale-95">
               Get Recommendations ✨
             </button>
-          </div>
-        </section>
-
-        {/* Recent Activities */}
-        <section className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 sm:p-8 hover:shadow-xl transition-shadow duration-300">
-          <h2 className="text-2xl font-bold text-black mb-6 flex items-center gap-2">
-            <TrendingUp className="w-6 h-6 text-blue-500" />
-            Your Recent Activities
-          </h2>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            {[
-              { name: 'Louvre Museum', date: 'Dec 15, 2025', category: 'Art & Museums', emoji: '🎨' },
-              { name: 'Jazz Concert', date: 'Dec 22, 2025', category: 'Music', emoji: '🎵' },
-              { name: 'Seine River Walk', date: 'Jan 5, 2026', category: 'Nature', emoji: '🌊' },
-            ].map((activity, idx) => (
-              <div key={idx} className="group bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 rounded-xl p-5 hover:border-black hover:shadow-lg transition-all duration-200 cursor-pointer transform hover:scale-105">
-                <div className="flex items-start gap-3 mb-3">
-                  <span className="text-3xl group-hover:scale-110 transition-transform">{activity.emoji}</span>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-black group-hover:text-gray-700 transition-colors">
-                      {activity.name}
-                    </h3>
-                    <p className="text-xs text-gray-500 mt-1">{activity.date}</p>
-                  </div>
-                </div>
-                <span className="inline-block px-3 py-1.5 bg-gray-100 text-black text-xs font-semibold rounded-full">
-                  {activity.category}
-                </span>
-              </div>
-            ))}
           </div>
         </section>
 
